@@ -12,7 +12,7 @@ On the same machine go to run curl -X GET http://127.0.0.1:2222/ and you will be
 
 API<br>
 
-<b>GET /?action=request_payment&amount=/:amount&currency=/:currency&message=:message&callback_url=:callback_url</b><br>
+<b>GET /?action=request_payment&amount=:amount&currency=:currency&message=:message&callback_url=:callback_url</b><br>
 
 Create a request to pay, supports all currencies from coinmarketcap.com. Non-aro currency is converted to aro using current rate from coinmarketcap.com. Returns a json document with QR code to be displayed to the payer, and a unique address for that particular payment (you can use it as invoice id). Message will be displayed to the client (for example, you can write "Payment for goods"). Seller and customer - system field, here you can write the application that created the request and the payer id. Keep Seller field private, it is also used for payouts. Callback_url will be requested once the invoice is paid.<br>
 <pre>
