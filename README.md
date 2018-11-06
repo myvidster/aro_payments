@@ -50,8 +50,22 @@ Example response<br>
 <pre>
 <code>
 	{<br>
-		"balance":"1.42886346"<br>
+		"balance":"44"<br>
 	}<br>
 </code>
 </pre>
 <br>
+<b>GET /?action=collect_funds&amount=:amount</b><br>
+Transfer funds from aggregated seller's address to some other address. Supported currencies: ARO. There's no additional sequrity here, it is presumed that the %seller% identifier is kept secret.<br>
+<pre>
+<code>
+Example response<br>
+<br>
+<pre>
+<code>
+	{<br>
+		"txid":"mFu8qs69SwRxM7Js39484TmUS1yr9kF18i8iDD2FMohx4B54hi5JGdwmPjVg1xWnnchzh7WCaRWaxiR3KnaEzYC",<br>
+		"amount" : 44<br>
+	}<br>
+</code>
+</pre>
