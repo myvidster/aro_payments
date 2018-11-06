@@ -40,7 +40,7 @@
 			
 			$pay_load['aro_amount']=$aro_amount;
 
-			$bitcoin = new jsonRPCClient("http://rpc:d0qM830RmEWl@$json_rpc_server/");
+			$bitcoin = new jsonRPCClient("http://$json_rpc_user:$json_rpc_pass@$json_rpc_server/");
 			$address=$bitcoin->getnewaddress();
 	
 			$pay_load['address']=$address;
@@ -85,10 +85,10 @@
 			$pay_load['aro_expected']=$aro_amount;
 			
 			if($auto_withdraw && $aro_actual > 0) {
-				$bitcoin = new jsonRPCClient("http://rpc:d0qM830RmEWl@$json_rpc_server/");
+				$bitcoin = new jsonRPCClient("http://$json_rpc_user:$json_rpc_pass@$json_rpc_server/");
 				$bitcoin->walletpassphrase($wallet_pw);
 				$balance = $bitcoin->getbalance("*");
-
+				
 				if($aro_actual >= $balance)
 					$aro_actual=$balance-$bank;
 				
@@ -97,12 +97,12 @@
 			}
 		break;
 		case 'getbalance':
-			$bitcoin = new jsonRPCClient("http://rpc:d0qM830RmEWl@$json_rpc_server/");
+			$bitcoin = new jsonRPCClient("http://$json_rpc_user:$json_rpc_pass@$json_rpc_server/");
 			$balance = $bitcoin->getbalance("*");
 			$pay_load['balance']=$balance;
 		break;
 		case 'collect_funds':
-			$bitcoin = new jsonRPCClient("http://rpc:d0qM830RmEWl@$json_rpc_server/");
+			$bitcoin = new jsonRPCClient("http://$json_rpc_user:$json_rpc_pass@$json_rpc_server/");
 			$bitcoin->walletpassphrase($wallet_pw);
 			$balance = $bitcoin->getbalance("*");
 			

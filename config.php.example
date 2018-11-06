@@ -1,6 +1,8 @@
 <?php
 	$aro_dir="";			//do not set this value if running in your web root folder, format: /folder_name
 	$json_rpc_server="";		//setup for jron-rpc @ https://github.com/arionum/json-rpc
+	$json_rpc_user="";
+	$json_rpc_pass="";
 	$node_server="";		//setup for node @ https://github.com/arionum/node
 	$wallet_address="";		//setup for wallet @ https://github.com/arionum/lightWalletCLI
 	$wallet_pw="";
