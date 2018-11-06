@@ -1,0 +1,14 @@
+<?php
+	$aro_dir="";			//do not set this value if running in your web root folder
+	$json_rpc_server="";		//setup for jron-rpc @ https://github.com/arionum/json-rpc
+	$node_server="";		//setup for node @ https://github.com/arionum/node
+	$wallet_address="";		//setup a new wallet @ https://github.com/arionum/lightWalletCLI
+	$wallet_pw="";
+	$round_price = 2;
+	$bank = 10;			//keep some ARO in the wallet for fees, setting to low can cause transaction errors when you collect your funds
+	$database_host="";
+	$database="";
+	$database_user="";
+	$database_pass="";
+	$auto_withdraw=true;		//will send available funds from the payment address when running check_payment, if it is set to false you will have to execute the collect_funds manually
+?>
