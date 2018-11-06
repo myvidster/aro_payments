@@ -31,7 +31,7 @@ example response<br>
 Check payment by a unique address received in the "request_payment" call.<br>
 <pre>
 <code>
-Response<br>
+Example response<br>
 <br>
 	{<br>
 		"aro_expected" : 44,<br>
@@ -39,3 +39,19 @@ Response<br>
 	}<br>	
 </code>
 </pre>
+<br>
+
+<b>GET /?action=getbalance</b><br>
+Check the total balance.
+<pre>
+<code>
+Example response<br>
+<br>
+<pre>
+<code>
+	{<br>
+		"balance":"1.42886346"<br>
+	}<br>
+</code>
+</pre>
+<br>
