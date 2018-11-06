@@ -47,8 +47,6 @@ Check the total balance.
 <code>
 Example response<br>
 <br>
-<pre>
-<code>
 	{<br>
 		"balance":"44"<br>
 	}<br>
