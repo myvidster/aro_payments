@@ -59,8 +59,6 @@ Transfer funds from aggregated seller's address to some other address. Supported
 <code>
 Example response<br>
 <br>
-<pre>
-<code>
 	{<br>
 		"txid":"mFu8qs69SwRxM7Js39484TmUS1yr9kF18i8iDD2FMohx4B54hi5JGdwmPjVg1xWnnchzh7WCaRWaxiR3KnaEzYC",<br>
 		"amount" : 44<br>
