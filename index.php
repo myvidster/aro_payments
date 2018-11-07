@@ -78,7 +78,6 @@
 				$pay_load['aro_actual'] = 0;
 
 			$sql="select aro_amount from aro_payments where aro_address = '$address'";
-			
 			$result = $mysqli->query($sql);
 			$row = $result->fetch_assoc();
 			$aro_amount = $row['aro_amount'];
@@ -87,9 +86,10 @@
 			if($auto_withdraw && $aro_actual > 0) {
 				$bitcoin = new jsonRPCClient("http://$json_rpc_user:$json_rpc_pass@$json_rpc_server/");
 				$bitcoin->walletpassphrase($wallet_pw);
+			
 				$balance = $bitcoin->getbalance("*");
-				
-				if($aro_actual >= $balance)
+
+				if($aro_actual >=$balance-$bank)
 					$aro_actual=$balance-$bank;
 				
 				$txid = $bitcoin->sendtoaddress($wallet_address,floatval($aro_actual));
@@ -109,7 +109,7 @@
 			if(!$amount)
 				$amount=$balance-$bank;
 
-			if($amount >= $balance)
+			if($amount >= $balance-$bank)
 				$amount=$balance-$bank;
 
 			if($aro_actual > 0) {
